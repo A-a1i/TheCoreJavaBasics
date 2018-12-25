@@ -1,0 +1,61 @@
+1)mysql - u root -p
+2)show databases;
+mysql> create table newnew(id int,name varchar(10),salary int,location varchar(10));
+Query OK, 0 rows affected (0.34 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_practice |
++--------------------+
+| emp                |
+| newnew             |
++--------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc emp;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| empid  | int(10) | NO   |     | NULL    |       |
+| salary | int(10) | NO   |     | NULL    |       |
++--------+---------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc newnew;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(11)     | YES  |     | NULL    |       |
+| name     | varchar(10) | YES  |     | NULL    |       |
+| salary   | int(11)     | YES  |     | NULL    |       |
+| location | varchar(10) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+mysql> create table emp(id int,name varchar(10),salary int,location varchar(10); 
+
+mysql> insert into newnew values (1,"ali",20000,"Thane");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into newnew (name,salary,location,id)values("ali",20000,"thane"2);
+
+mysql> insert into newnew (name,salary,location,id)values("ali",20000,"thane",2);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into newnew (name,salary)values("ali",20000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select newnew;
+
+mysql> select * from newnew;
++------+------+--------+----------+
+| id   | name | salary | location |
++------+------+--------+----------+
+|    1 | ali  |  20000 | Thane    |
+|    2 | ali  |  20000 | thane    |
+| NULL | ali  |  20000 | NULL     |
++------+------+--------+----------+
+3 rows in set (0.00 sec)
+
+
